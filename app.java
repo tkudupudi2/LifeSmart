@@ -107,13 +107,36 @@ public class app extends Application {
         Button registerButton3 = new Button("Login");
         GridPane.setConstraints(registerButton3, 3, 0);
         registerButton3.setOnAction(e -> window.setScene(scene3));
+        Label firstName = new Label ("First Name");
+        GridPane.setConstraints(firstName, 4, 2);
+        TextField firstNameInput= new TextField();
+        firstNameInput.setPromptText("First Name");
+		GridPane.setConstraints(firstNameInput, 5, 2);
+		Label lastName = new Label ("Last Name");
+        GridPane.setConstraints(lastName, 4, 3);
+        TextField lastNameInput= new TextField();
+        lastNameInput.setPromptText("Last Name");
+		GridPane.setConstraints(lastNameInput, 5, 3);
+        Label nameLabel1 = new Label ("Username:");
+		GridPane.setConstraints(nameLabel1, 4, 4);		
+        TextField nameInput1= new TextField();
+        nameInput1.setPromptText("Username");
+		GridPane.setConstraints(nameInput1, 5, 4);
+		Label passLabel1 = new Label ("Password:");
+		GridPane.setConstraints(passLabel1, 4, 5);
+		TextField passInput1= new TextField();
+		passInput1.setPromptText("Password");
+		GridPane.setConstraints(passInput1, 5, 5);
+		Button submitButton1 = new Button ("Submit");
+		GridPane.setConstraints(submitButton1, 5, 6);
+		submitButton1.setOnAction(e -> window.setScene(scene3));
 
         //Register Layout
         GridPane gridPane4 = new GridPane();
         gridPane4.setPadding(new Insets(10, 10, 10, 10));
 		gridPane4.setVgap(8);
 		gridPane4.setHgap(10);
-		gridPane4.getChildren().addAll(label4, registerButton1, registerButton2, registerButton3);
+		gridPane4.getChildren().addAll(label4, registerButton1, registerButton2, registerButton3, nameLabel1, nameInput1, passLabel1, passInput1, submitButton1, firstName, firstNameInput, lastName, lastNameInput);
         scene4 = new Scene(gridPane4, 1920, 1080);
         
         //Logged In User Home Button

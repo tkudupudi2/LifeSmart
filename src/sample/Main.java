@@ -1,4 +1,6 @@
-package sample;
+package src.sample;
+
+import java.util.HashMap;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -7,6 +9,16 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 public class Main extends Application {
+	
+	private static HashMap<String, String> userEmailPasswordMap = new HashMap<>();
+	
+	public static void putInMap(String email, String password) {
+		userEmailPasswordMap.put(email, password);
+	}
+	
+	public static HashMap<String, String> getMap() {
+		return userEmailPasswordMap;
+	}
 
     @Override
     public void start(Stage primaryStage) throws Exception{

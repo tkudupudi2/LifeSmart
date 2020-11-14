@@ -4,7 +4,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" style="-fx-background-color: #000000;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Login">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" style="-fx-background-color: #000000;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.LoginController">
     <children>
         <Pane prefHeight="200.0" prefWidth="200.0">
             <children>
@@ -36,11 +36,15 @@
         </Pane>
         <TextField layoutX="265.0" layoutY="107.0" prefHeight="27.0" prefWidth="176.0" promptText="Email" />
         <TextField layoutX="265.0" layoutY="163.0" prefHeight="27.0" prefWidth="176.0" promptText="Password" />
-        <Button layoutX="319.0" layoutY="252.0" mnemonicParsing="false" text="Sign In" />
+        <Button layoutX="313.0" layoutY="241.0" mnemonicParsing="false" onAction="#buttonClicked" text="Sign In" />
         <Label layoutX="313.0" layoutY="54.0" prefHeight="27.0" prefWidth="83.0" text="Login" textFill="WHITE">
             <font>
                 <Font name="Chalkduster" size="15.0" />
             </font>
         </Label>
+      <Button layoutX="386.0" layoutY="287.0" mnemonicParsing="false" onAction="#registerButtonClicked" text="Register" />
+      <Label layoutX="265.0" layoutY="292.0" text="Need An Account?" textFill="WHITE" />
+      <Label layoutX="386.0" layoutY="246.0" text="Label" textFill="WHITE" />
+      <Label layoutX="473.0" layoutY="292.0" text="Label" textFill="#ebebeb" />
     </children>
 </AnchorPane>

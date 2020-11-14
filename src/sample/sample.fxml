@@ -4,7 +4,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" style="-fx-background-color: #000000;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" style="-fx-background-color: #000000;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.SignUpController">
     <children>
         <Pane prefHeight="200.0" prefWidth="200.0">
             <children>
@@ -42,12 +42,12 @@
         <TextField layoutX="416.0" layoutY="150.0" prefHeight="27.0" prefWidth="176.0" promptText="Username" />
         <TextField layoutX="416.0" layoutY="200.0" prefHeight="27.0" prefWidth="176.0" promptText="Weight" />
         <TextField layoutX="416.0" layoutY="251.0" prefHeight="27.0" prefWidth="176.0" promptText="Repeat Password" />
-        <Button layoutX="325.0" layoutY="325.0" mnemonicParsing="false" text="Register" />
+        <Button layoutX="325.0" layoutY="325.0" mnemonicParsing="false" onAction="#buttonClicked" text="Register" />
         <Label layoutX="313.0" layoutY="54.0" prefHeight="27.0" prefWidth="83.0" text="Register" textFill="WHITE">
             <font>
                 <Font name="Chalkduster" size="15.0" />
             </font>
         </Label>
+      <Label layoutX="416.0" layoutY="330.0" text="Label" textFill="WHITE" />
     </children>
 </AnchorPane>
-

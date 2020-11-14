@@ -1,3 +1,7 @@
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
+
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -13,6 +17,8 @@ import javafx.stage.Stage;
 import javafx.stage.Window;
 
 public class RegistrationFormApplication extends Application {
+	
+	private Map<String, String> userEmailPasswordMap = new HashMap<String, String>();
 
     @Override
     public void start(Stage primaryStage) throws Exception {
@@ -110,21 +116,30 @@ public class RegistrationFormApplication extends Application {
         GridPane.setMargin(submitButton, new Insets(20, 0,20,0));
 
         submitButton.setOnAction(new EventHandler<ActionEvent>() {
+        	boolean nameFieldFilled, emailFieldFilled, passwordFieldFilled = false;
             @Override
             public void handle(ActionEvent event) {
                 if(nameField.getText().isEmpty()) {
                     showAlert(Alert.AlertType.ERROR, gridPane.getScene().getWindow(), "Form Error!", "Please enter your name");
                     return;
-                }
+                } else 
+                	nameFieldFilled = true;
                 if(emailField.getText().isEmpty()) {
                     showAlert(Alert.AlertType.ERROR, gridPane.getScene().getWindow(), "Form Error!", "Please enter your email id");
                     return;
-                }
+                } else 
+                	emailFieldFilled = true;
                 if(passwordField.getText().isEmpty()) {
                     showAlert(Alert.AlertType.ERROR, gridPane.getScene().getWindow(), "Form Error!", "Please enter a password");
                     return;
+                } else
+                	passwordFieldFilled = true;
+                
+                if (nameFieldFilled && emailFieldFilled && passwordFieldFilled) {
+                	userEmailPasswordMap.put(emailField.getText(), passwordField.getText());
+                	System.out.println(Arrays.asList(userEmailPasswordMap));
+                	showAlert(Alert.AlertType.CONFIRMATION, gridPane.getScene().getWindow(), "Registration Successful!", "Welcome " + nameField.getText());
                 }
-                showAlert(Alert.AlertType.CONFIRMATION, gridPane.getScene().getWindow(), "Registration Successful!", "Welcome " + nameField.getText());
             }
         });
     }

@@ -1,4 +1,4 @@
-package src.sample;
+package application;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -52,10 +52,12 @@ public class SignUpController {
     		errorLabel.setText("Email already exists in directory.");
     		return;
     	} 
-    	if(!passwordField.equals(repeatPasswordField)) {
+    	if(!passwordField.getText().equals(repeatPasswordField.getText())) {
+    		errorLabel.setText("Passwords do not match.");
     		return;
     	}
-    	Parent loginViewParent = FXMLLoader.load(getClass().getResource("login.fxml"));
+    	
+    	Parent loginViewParent = FXMLLoader.load(getClass().getResource("./login.fxml"));
 		Scene loginScene = new Scene(loginViewParent);
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
         window.setScene(loginScene);

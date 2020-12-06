@@ -1,4 +1,4 @@
-package src.sample;
+package application;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -42,18 +42,18 @@ public class LoginController {
     			errorLabel.setText("Email does not exist in directory.");
     			return;
     		} else {
-    		// transition to home
-    		Parent stepsViewParent = FXMLLoader.load(getClass().getResource("steps.fxml"));
-    		Scene stepsScene = new Scene(stepsViewParent);
-    		Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
-    		window.setScene(stepsScene);
-    		window.show();
+	    		// transition to home
+	    		Parent stepsViewParent = FXMLLoader.load(getClass().getResource("steps.fxml"));
+	    		Scene stepsScene = new Scene(stepsViewParent);
+	    		Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+	    		window.setScene(stepsScene);
+	    		window.show();
     		}
     	}
     }
 
     public void registerButtonClicked(ActionEvent event) throws IOException {
-        Parent registerViewParent = FXMLLoader.load(getClass().getResource("sample.fxml"));
+        Parent registerViewParent = FXMLLoader.load(getClass().getResource("./sample.fxml"));
         Scene registerScene = new Scene(registerViewParent);
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
         window.setScene(registerScene);

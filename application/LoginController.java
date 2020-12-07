@@ -43,7 +43,7 @@ public class LoginController {
     			return;
     		} else {
 	    		// transition to home
-	    		Parent stepsViewParent = FXMLLoader.load(getClass().getResource("steps.fxml"));
+	    		Parent stepsViewParent = FXMLLoader.load(getClass().getResource("home.fxml"));
 	    		Scene stepsScene = new Scene(stepsViewParent);
 	    		Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
 	    		window.setScene(stepsScene);

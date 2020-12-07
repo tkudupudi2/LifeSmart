@@ -11,9 +11,9 @@
   <children>
     <Pane prefHeight="1080.0" prefWidth="200.0" style="-fx-background-color: #add8e6;">
          <children>
-            <Label layoutX="-67.0" layoutY="475.0" prefHeight="41.0" prefWidth="334.0" rotate="-90.0" text="STEPS">
+            <Label layoutX="-67.0" layoutY="475.0" prefHeight="41.0" prefWidth="334.0" rotate="-90.0" text="CALORIES">
                <font>
-                  <Font name="Chalkduster" size="96.0" />
+                  <Font name="Chalkduster" size="52.0" />
                </font>
             </Label>
          </children></Pane>
@@ -23,18 +23,18 @@
     <Button layoutX="446.0" layoutY="2.0" mnemonicParsing="false" text="Water" />
     <Button layoutX="526.0" layoutY="2.0" mnemonicParsing="false" text="Sleep" />
     <Button layoutX="606.0" layoutY="2.0" mnemonicParsing="false" onAction="#logoutButtonClicked" text="Log Out" />
-      <Label layoutX="277.0" layoutY="236.0" text="Total Updated Steps: ">
+      <Label layoutX="277.0" layoutY="236.0" text="Total Updated Calories Consumed:">
          <font>
             <Font size="20.0" />
          </font>
       </Label>
-      <Label layoutX="481.0" layoutY="241.0" text="stepsLabel" />
-      <Label layoutX="277.0" layoutY="169.0" text="Steps Walked:">
+      <Label layoutX="587.0" layoutY="240.0" text="caloriesLabel" />
+      <Label layoutX="273.0" layoutY="149.0" text="Updated Calorie Consumed:">
          <font>
             <Font size="20.0" />
          </font>
       </Label>
-      <TextField layoutX="417.0" layoutY="169.0" />
+      <TextField layoutX="533.0" layoutY="148.0" />
       <Button layoutX="356.0" layoutY="318.0" mnemonicParsing="false" text="Confirm" />
   </children>
 </AnchorPane>

@@ -2,7 +2,6 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
@@ -11,9 +10,9 @@
   <children>
     <Pane prefHeight="1080.0" prefWidth="200.0" style="-fx-background-color: #add8e6;">
          <children>
-            <Label layoutX="-67.0" layoutY="475.0" prefHeight="41.0" prefWidth="334.0" rotate="-90.0" text="STEPS">
+            <Label layoutX="-67.0" layoutY="475.0" prefHeight="41.0" prefWidth="334.0" rotate="-90.0" text="WELCOME">
                <font>
-                  <Font name="Chalkduster" size="96.0" />
+                  <Font name="Chalkduster" size="52.0" />
                </font>
             </Label>
          </children></Pane>
@@ -23,18 +22,29 @@
     <Button layoutX="446.0" layoutY="2.0" mnemonicParsing="false" text="Water" />
     <Button layoutX="526.0" layoutY="2.0" mnemonicParsing="false" text="Sleep" />
     <Button layoutX="606.0" layoutY="2.0" mnemonicParsing="false" onAction="#logoutButtonClicked" text="Log Out" />
-      <Label layoutX="277.0" layoutY="236.0" text="Total Updated Steps: ">
+    <Label layoutX="416.0" layoutY="206.0" text="stepsLabel" />
+      <Label layoutX="277.0" layoutY="201.0" text="Total Steps:">
          <font>
             <Font size="20.0" />
          </font>
       </Label>
-      <Label layoutX="481.0" layoutY="241.0" text="stepsLabel" />
-      <Label layoutX="277.0" layoutY="169.0" text="Steps Walked:">
+      <Label layoutX="419.0" layoutY="262.0" text="caloriesLabel" />
+      <Label layoutX="277.0" layoutY="257.0" text="Total Calories:">
          <font>
             <Font size="20.0" />
          </font>
       </Label>
-      <TextField layoutX="417.0" layoutY="169.0" />
-      <Button layoutX="356.0" layoutY="318.0" mnemonicParsing="false" text="Confirm" />
+      <Label layoutX="467.0" layoutY="323.0" text="waterLabel" />
+      <Label layoutX="277.0" layoutY="318.0" text="Total cups of Water:">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="442.0" layoutY="381.0" text="sleepLabel" />
+      <Label layoutX="277.0" layoutY="376.0" text="Total Sleep (hrs):">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
   </children>
 </AnchorPane>

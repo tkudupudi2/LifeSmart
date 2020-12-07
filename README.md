@@ -11,3 +11,4 @@ Have **Java8** installed.
 - Register: Users are able to create an account.
 - Login: a login manager that keeps users authenticated.
 - Logout: A logout manages that logs out the user.
+- Fitness Log: A log that stores the user's fitness information such as steps, water, sleep, and calories.

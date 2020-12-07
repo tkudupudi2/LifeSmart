@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="1080.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="1080.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.StepsController">
   <children>
     <Pane prefHeight="1080.0" prefWidth="200.0" style="-fx-background-color: #add8e6;">
          <children>
@@ -17,24 +17,25 @@
                </font>
             </Label>
          </children></Pane>
-    <Button layoutX="200.0" layoutY="2.0" mnemonicParsing="false" text="Home" />
+    <Button layoutX="200.0" layoutY="2.0" mnemonicParsing="false" onAction="#homeButtonClicked" text="Home" />
     <Button layoutX="277.0" layoutY="2.0" mnemonicParsing="false" text="Steps" />
-    <Button layoutX="356.0" layoutY="2.0" mnemonicParsing="false" text="Calories" />
-    <Button layoutX="446.0" layoutY="2.0" mnemonicParsing="false" text="Water" />
-    <Button layoutX="526.0" layoutY="2.0" mnemonicParsing="false" text="Sleep" />
+    <Button layoutX="356.0" layoutY="2.0" mnemonicParsing="false" onAction="#caloriesButtonClicked" text="Calories" />
+    <Button layoutX="446.0" layoutY="2.0" mnemonicParsing="false" onAction="#waterButtonClicked" text="Water" />
+    <Button layoutX="526.0" layoutY="2.0" mnemonicParsing="false" onAction="#sleepButtonClicked" text="Sleep" />
     <Button layoutX="606.0" layoutY="2.0" mnemonicParsing="false" onAction="#logoutButtonClicked" text="Log Out" />
       <Label layoutX="277.0" layoutY="236.0" text="Total Updated Steps: ">
          <font>
             <Font size="20.0" />
          </font>
       </Label>
-      <Label layoutX="481.0" layoutY="241.0" text="stepsLabel" />
+      <Label fx:id="stepsLabel" layoutX="481.0" layoutY="241.0" text="0" />
       <Label layoutX="277.0" layoutY="169.0" text="Steps Walked:">
          <font>
             <Font size="20.0" />
          </font>
       </Label>
-      <TextField layoutX="417.0" layoutY="169.0" />
-      <Button layoutX="356.0" layoutY="318.0" mnemonicParsing="false" text="Confirm" />
+      <TextField fx:id="stepField" layoutX="417.0" layoutY="169.0" />
+      <Button layoutX="356.0" layoutY="318.0" mnemonicParsing="false" onAction="#setStepsButtonClicked" text="Confirm" />
+      <Label fx:id="errorLabel" layoutX="419.0" layoutY="203.0" text=" " textFill="#eb0505" />
   </children>
 </AnchorPane>

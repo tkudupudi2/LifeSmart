@@ -46,16 +46,20 @@ public class SignUpController {
     		errorLabel.setText("Please fill in all the fields before continuing.");
     		return;
     	}
-    	
     	// Check if email exists already in directory
     	if(Main.getMap().containsKey(emailField.getText())) {
     		errorLabel.setText("Email already exists in directory.");
     		return;
     	} 
+    	//Check if passwords match
     	if(!passwordField.getText().equals(repeatPasswordField.getText())) {
     		errorLabel.setText("Passwords do not match.");
     		return;
     	}
+    	
+    	//Enter username-password into hashmap
+    	Main.putInMap(emailField.getText(), passwordField.getText());
+    	
     	
     	Parent loginViewParent = FXMLLoader.load(getClass().getResource("./login.fxml"));
 		Scene loginScene = new Scene(loginViewParent);

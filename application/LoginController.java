@@ -33,17 +33,17 @@ public class LoginController {
     	}
     			
     	// Check if email exists in directory
-    	if(!Main.getMap().containsKey(emailField.getText())) {
+    	if(!(Main.getMap().containsKey(emailField.getText()))) {
     		errorLabel.setText("Email does not exist in directory.");
     		return;
     	} else {
     		// Check if email matches password
-    		if(!Main.getMap().get(emailField.getText()).equals(passwordField.getText())) {
+    		if(!(Main.getMap().get(emailField.getText()).equals(passwordField.getText()))) {
     			errorLabel.setText("Email does not exist in directory.");
     			return;
     		} else {
 	    		// transition to home
-	    		Parent stepsViewParent = FXMLLoader.load(getClass().getResource("home.fxml"));
+	    		Parent stepsViewParent = FXMLLoader.load(getClass().getResource("./home.fxml"));
 	    		Scene stepsScene = new Scene(stepsViewParent);
 	    		Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
 	    		window.setScene(stepsScene);
@@ -53,7 +53,7 @@ public class LoginController {
     }
 
     public void registerButtonClicked(ActionEvent event) throws IOException {
-        Parent registerViewParent = FXMLLoader.load(getClass().getResource("./sample.fxml"));
+        Parent registerViewParent = FXMLLoader.load(getClass().getResource("./registration.fxml"));
         Scene registerScene = new Scene(registerViewParent);
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
         window.setScene(registerScene);

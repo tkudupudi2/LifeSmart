@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="1080.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="1080.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SleepController">
   <children>
     <Pane prefHeight="1080.0" prefWidth="200.0" style="-fx-background-color: #add8e6;">
          <children>
@@ -17,10 +17,10 @@
                </font>
             </Label>
          </children></Pane>
-    <Button layoutX="200.0" layoutY="2.0" mnemonicParsing="false" text="Home" />
-    <Button layoutX="277.0" layoutY="2.0" mnemonicParsing="false" text="Steps" />
-    <Button layoutX="356.0" layoutY="2.0" mnemonicParsing="false" text="Calories" />
-    <Button layoutX="446.0" layoutY="2.0" mnemonicParsing="false" text="Water" />
+    <Button layoutX="200.0" layoutY="2.0" mnemonicParsing="false" onAction="#homeButtonClicked" text="Home" />
+    <Button layoutX="277.0" layoutY="2.0" mnemonicParsing="false" onAction="#stepsButtonClicked" text="Steps" />
+    <Button layoutX="356.0" layoutY="2.0" mnemonicParsing="false" onAction="#caloriesButtonClicked" text="Calories" />
+    <Button layoutX="446.0" layoutY="2.0" mnemonicParsing="false" onAction="#waterButtonClicked" text="Water" />
     <Button layoutX="526.0" layoutY="2.0" mnemonicParsing="false" text="Sleep" />
     <Button layoutX="606.0" layoutY="2.0" mnemonicParsing="false" onAction="#logoutButtonClicked" text="Log Out" />
       <Label layoutX="275.0" layoutY="169.0" text="Hours of Sleep:">
@@ -28,13 +28,14 @@
             <Font size="20.0" />
          </font>
       </Label>
-      <Label layoutX="545.0" layoutY="240.0" text="sleepLabel" />
+      <Label fx:id="sleepLabel" layoutX="545.0" layoutY="240.0" text="0" />
       <Label layoutX="277.0" layoutY="235.0" text="Updated Total hours of Sleep:">
          <font>
             <Font size="20.0" />
          </font>
       </Label>
-      <TextField layoutX="417.0" layoutY="169.0" />
-      <Button layoutX="356.0" layoutY="318.0" mnemonicParsing="false" text="Confirm" />
+      <TextField fx:id="sleepField" layoutX="417.0" layoutY="169.0" />
+      <Button layoutX="356.0" layoutY="318.0" mnemonicParsing="false" onAction="#setSleepButtonClicked" text="Confirm" />
+      <Label fx:id="errorLabel" layoutX="417.0" layoutY="206.0" text=" " textFill="#f80707" />
   </children>
 </AnchorPane>

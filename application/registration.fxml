@@ -14,7 +14,7 @@
     <children>
         <Pane prefHeight="200.0" prefWidth="200.0">
             <children>
-                <Pane prefHeight="1080.0" prefWidth="111.0" style="-fx-background-color: #FFFFFF;">
+                <Pane prefHeight="1080.0" prefWidth="0.0" style="-fx-background-color: #FFFFFF;">
                     <children>
                         <MenuBar prefHeight="29.0" prefWidth="200.0">
                             <menus>
@@ -40,14 +40,9 @@
                     </children></Pane>
             </children>
         </Pane>
-        <TextField fx:id="firstNameField" layoutX="132.0" layoutY="100.0" prefHeight="27.0" prefWidth="176.0" promptText="First Name" />
-        <TextField fx:id="emailField" layoutX="132.0" layoutY="150.0" prefHeight="27.0" prefWidth="176.0" promptText="Email" />
-        <TextField fx:id="heightField" layoutX="132.0" layoutY="200.0" prefHeight="27.0" prefWidth="176.0" promptText="Height" />
-        <TextField fx:id="passwordField" layoutX="132.0" layoutY="251.0" prefHeight="27.0" prefWidth="176.0" promptText="Password" />
-        <TextField fx:id="lastNameField" layoutX="416.0" layoutY="100.0" prefHeight="27.0" prefWidth="176.0" promptText="Last Name" />
-        <TextField fx:id="userNameField" layoutX="416.0" layoutY="150.0" prefHeight="27.0" prefWidth="176.0" promptText="Username" />
-        <TextField fx:id="weightField" layoutX="416.0" layoutY="200.0" prefHeight="27.0" prefWidth="176.0" promptText="Weight" />
-        <TextField fx:id="repeatPasswordField" layoutX="416.0" layoutY="251.0" prefHeight="27.0" prefWidth="176.0" promptText="Repeat Password" />
+        <TextField fx:id="emailField" layoutX="267.0" layoutY="137.0" prefHeight="27.0" prefWidth="176.0" promptText="Email" />
+        <TextField fx:id="passwordField" layoutX="267.0" layoutY="200.0" prefHeight="27.0" prefWidth="176.0" promptText="Password" />
+        <TextField fx:id="repeatPasswordField" layoutX="267.0" layoutY="266.0" prefHeight="27.0" prefWidth="176.0" promptText="Repeat Password" />
         <Button layoutX="325.0" layoutY="325.0" mnemonicParsing="false" onAction="#buttonClicked" text="Register" />
         <Label layoutX="313.0" layoutY="54.0" prefHeight="27.0" prefWidth="83.0" text="Register" textFill="WHITE">
             <font>
